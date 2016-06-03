@@ -1,3 +1,4 @@
+package Graphique;
 
 public interface Graphe {
 
