@@ -10,5 +10,4 @@ public class classPartie
 	private classJoueur JoueurA;
 	private classJoueur JoueurB;
 
-	
 }
