@@ -1,9 +1,5 @@
 
-/*
 package Graphique;
-=======
-/*package Graphique;
->>>>>>> origin/master
 
 public interface Graphe {
 
@@ -13,4 +9,4 @@ public interface Graphe {
 
 	public void displayShip(Ship ship);
 
-}*/
+}
