@@ -1,4 +1,5 @@
-package Graphique;
+
+/*package Graphique;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -255,3 +256,4 @@ public class Graphique extends JFrame implements GameUI
   }
 
 }
+*/
