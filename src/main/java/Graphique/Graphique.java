@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 /*package Graphique;
 
 import java.awt.Color;
