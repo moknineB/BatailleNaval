@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 package Partie;
 
@@ -20,11 +21,19 @@ package Partie;
  *
  
  public class Main 
+=======
+package Partie;
+
+public class Main 
+>>>>>>> origin/master
 {
     public static void main( String[] args )
     {
       
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/master
 */
+=======
+>>>>>>> origin/master

@@ -1,7 +1,6 @@
 package Partie;
 
 import java.util.ArrayList;
-
 import Joueur.classBateau;
 import Joueur.classJoueur;
 
