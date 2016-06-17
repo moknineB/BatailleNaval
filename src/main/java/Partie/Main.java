@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+/*
 package Partie;
 
 /**
  * Hello world!
  *
- */
+
 public class Main 
 {
     public static void main( String[] args )
@@ -18,8 +18,8 @@ package Partie;
 /**
  * Hello world!
  *
- */
-public class Main 
+ 
+ public class Main 
 {
     public static void main( String[] args )
     {
@@ -27,3 +27,4 @@ public class Main
     }
 }
 >>>>>>> origin/master
+*/
