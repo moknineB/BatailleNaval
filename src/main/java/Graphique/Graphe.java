@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 /*
 package Graphique;
+=======
+/*package Graphique;
+>>>>>>> origin/master
 
 public interface Graphe {
 
