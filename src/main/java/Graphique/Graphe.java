@@ -1,4 +1,4 @@
-package Graphique;
+/*package Graphique;
 
 public interface Graphe {
 
@@ -8,4 +8,4 @@ public interface Graphe {
 
 	public void displayShip(Ship ship);
 
-}
+}*/
