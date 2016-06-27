@@ -56,7 +56,7 @@ public class GrapheConsole implements Graphe
         setField(ship.getX(), ship.getY() + i, icons[4]);
       }
     }
-    System.out.println("===> Ship est touché!\n");
+    System.out.println("===> Bateau est touché!\n");
   }
 
   private void setField(int x, int y, String icon)
@@ -98,20 +98,8 @@ public class GrapheConsole implements Graphe
   {
     StringBuilder sb = new StringBuilder();
     
-    sb.append("                                     |__\n");
-    sb.append("                                     |\\/\n");
-    sb.append("                                     ---\n");
-    sb.append("                                     / | [\n");
-    sb.append("                              !      | |||\n");
-    sb.append("                            _/|     _/|-++'\n");
-    sb.append("                        +  +--|    |--|--|_ |-\n");
-    sb.append("                     { /|__|  |/\\__|  |--- |||__/\\\n");
-    sb.append("                    +---------------___[}-_===_.'____                 /\\\n");
-    sb.append("                ____`-' ||___-{]_| _[}-  |     |_[___\\==--            \\/   _\n");
-    sb.append(" __..._____--==/___]_|__|_____________________________[___\\==--____,------' .7\n");
-    sb.append("|                   Java Bataille Navalle                /\n");
-    sb.append(" \\_________________________________________________________________________|\n\n");
-    sb.append("===> Enter your coordinates: x,y\n");
+    sb.append("|                   Java Bataille Navale    B3 EPSI             /\n");
+    sb.append("===> Entrer vos coordonnées: x,y\n");
     
     System.out.println(sb.toString());
   }
@@ -128,7 +116,7 @@ public class GrapheConsole implements Graphe
         
         if (input.length() < 3)
         {
-          System.out.println("Please enter your coordinates: y,x");
+          System.out.println("quels sont vos coordonnées: y,x");
           continue;
         }
         
