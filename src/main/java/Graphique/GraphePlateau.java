@@ -25,19 +25,18 @@ public class GraphePlateau
     
     for (Plateau[] row : gameField)
     {
-      Arrays.fill(row, new SingleField());
+      Arrays.fill(row, new Plateau1());
     }
 
     generateShips();
     debuging();
   }
 
-
   public boolean solved()
   {
     if (sunkenShips == shipCount)
     {
-      System.out.printf("===> Super! un bateau a été destroy!\n", shipCount, shotCount);
+      System.out.printf("===> Super! un bateau a été destrui!\n", shipCount, shotCount);
 
       return true;
     }
@@ -48,7 +47,7 @@ public class GraphePlateau
   {
     System.out.println("SIZE: " + this.size);
  
-    Plateau field = Plateau(x, y);
+    Plateau field = getPlateau(x, y);
     
  
     shotCount++;
@@ -86,7 +85,7 @@ public class GraphePlateau
       return true;
     } else {
     	
-      SingleField singleField = (SingleField) field;
+    	Plateau1 singleField = (Plateau1) field;
       singleField.shot();
     }
     
@@ -207,13 +206,13 @@ public class GraphePlateau
     if (horizontal)
     {
    
-      if (!(getField(x + length, y) instanceof SingleField) || !(getField(x - 1, y) instanceof SingleField))
+      if (!(getPlateau(x + length, y) instanceof Plateau1) || !(getPlateau(x - 1, y) instanceof Plateau1))
       {
         return false;
       }
     } else {
   
-      if (!(getField(x, y + length) instanceof SingleField) || !(getField(x, y - 1) instanceof SingleField))
+      if (!(getPlateau(x, y + length) instanceof Plateau1) || !(getPlateau(x, y - 1) instanceof Plateau1))
       {
         return false;
       }
@@ -225,13 +224,13 @@ public class GraphePlateau
       if (horizontal)
       {
        
-        if (!(getField(x + i, y - 1) instanceof SingleField) || !(getField(x + i, y + 1) instanceof SingleField))
+        if (!(getPlateau(x + i, y - 1) instanceof Plateau1) || !(getPlateau(x + i, y + 1) instanceof Plateau1))
         {
           return false;
         }
       } else {
    
-        if (!(getField(x - 1, y + i) instanceof SingleField) || !(getField(x + 1, y + i) instanceof SingleField))
+        if (!(getPlateau(x - 1, y + i) instanceof Plateau1) || !(getPlateau(x + 1, y + i) instanceof Plateau1))
         {
           return false;
         }
@@ -244,22 +243,22 @@ public class GraphePlateau
 
   private boolean isOccupied(int x, int y)
   {
-    return !(getField(x, y) instanceof SingleField);
+    return !(getPlateau(x, y) instanceof Plateau1);
   }
 
   
-  private Field getField(int x, int y)
+  private Plateau getPlateau(int x, int y)
   {
     if (x >= 0 && y >= 0 && x < size && y < size)
     {
       return gameField[y][x];
     }
   
-    return new SingleField();
+    return new Plateau1();
   }
 
  
-  private void setField(int x, int y, Field elem)
+  private void setField(int x, int y, Plateau elem)
   {
     if (x >= 0 && y >= 0 && x < size && y < size)
     {
@@ -294,9 +293,9 @@ public class GraphePlateau
     {
       for (int col = 0; col < size; col++)
       {
-        if (!(getField(col, row) instanceof SingleField))
+        if (!(getPlateau(col, row) instanceof Plateau1))
         {
-          output += (getField(col, row) instanceof Ship) ? "X" : "S";
+          output += (getPlateau(col, row) instanceof Ship) ? "X" : "S";
         } else {
           output += "#";
         }

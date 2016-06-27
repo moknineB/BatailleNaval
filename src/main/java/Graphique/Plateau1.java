@@ -12,7 +12,5 @@ public class Plateau1 extends Plateau
     return false;
   }
 
-  public void shot()
-  {
-  }
+  public void shot(){}
 }

@@ -7,7 +7,7 @@ public interface Graphe {
 
 	public void displayMissed(int x, int y);
 
-	public void displayShip(Ship ship);
+	public void displayShip(Navire navire);
 	
 
 }
