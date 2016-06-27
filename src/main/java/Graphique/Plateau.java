@@ -8,15 +8,13 @@ public abstract class Plateau
   private int x;
   private int y;
 
-  protected final Effects effects = new Effects();
-
   public Plateau(int x, int y, int length, boolean horizontal)
   {
     if (length > 0)
     {
       this.length = length;
     }
-    // set ship options
+    
     this.horizontal = horizontal;
     this.x = x;
     this.y = y;

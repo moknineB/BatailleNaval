@@ -10,22 +10,20 @@ public class GraphePlateau
   private int shotCount = 0;
   private int shipCount = 0;
 
-  private Field[][] gameField;
+  private Plateau[][] gameField;
   private final int[] shipTypes = { 1, 2, 3 };
 
-  // unit feature classes
-  private final Graphe gui = new Graphe(this); 
+  private final Graphe gui = new GrapheConsole(this); 
   
 
   public GraphePlateau(int size)
   {
         System.out.println("########### hello world");
-    // prepeare field
     this.size = size;
     
-    gameField = new Field[size][size];
+    gameField = new Plateau[size][size];
     
-    for (Field[] row : gameField)
+    for (Plateau[] row : gameField)
     {
       Arrays.fill(row, new SingleField());
     }
@@ -50,7 +48,7 @@ public class GraphePlateau
   {
     System.out.println("SIZE: " + this.size);
  
-    Field field = getField(x, y);
+    Plateau field = Plateau(x, y);
     
  
     shotCount++;
@@ -117,8 +115,6 @@ public class GraphePlateau
     int maxLength = 4;
     int length = random.nextInt(maxLength - 2 + 1) + 2;
     
-    // 1x4 // 2x3 //3x2 // 4x1
-    
     boolean shipCreated;
     
     do {
@@ -129,7 +125,6 @@ public class GraphePlateau
     } while (!shipCreated);
   }
 
- 
   private boolean setShip(int x, int y, int length, boolean horizontal)
   {
     if (!isOccupied(x, y) && checkFieldLength(x, y, length, horizontal) && checkFieldArea(x, y, length, horizontal))
