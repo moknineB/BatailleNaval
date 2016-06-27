@@ -18,7 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Graphique extends JFrame implements GameUI
+public class Graphique extends JFrame implements Graphe
 {
 
   // GameBoard properties (square dimension)
@@ -65,7 +65,7 @@ public class Graphique extends JFrame implements GameUI
 
   public void displayStrike(int x, int y)
   {
-    // get button and update its icon
+   
     JButton field = getField(x, y);
     setFieldIcon(field, "strike.png");
   }
@@ -83,15 +83,12 @@ public class Graphique extends JFrame implements GameUI
 
   public void displayShip(String type, int x, int y, boolean horizontal, int length)
   {
-    // System.out.printf("type: %s, x: %d, y: %d, horizontal: %b length: %d\n", type, x, y, horizontal, length);
     
-    // create new button
     JButton button = new JButton();
     button.setOpaque(false);
     button.setContentAreaFilled(false);
     button.setCursor(new Cursor(Cursor.HAND_CURSOR));
     button.setBorder(BorderFactory.createLineBorder(new Color(32, 156, 185)));
-    // add click listener for sunken ships
     button.addMouseListener(new MouseAdapter()
     {
       @Override
@@ -101,11 +98,11 @@ public class Graphique extends JFrame implements GameUI
       }
     });
     
-    // grid prefs for the new button
+   
     GridBagConstraints c = new GridBagConstraints();
     c.fill = GridBagConstraints.BOTH;
     
-    // set position
+   
     c.gridx = x;
     c.gridy = y;
     
