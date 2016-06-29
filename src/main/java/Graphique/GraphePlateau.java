@@ -2,6 +2,10 @@
 import java.util.Arrays;
 import java.util.Random;
 
+import Joueur.classBateau;
+import Joueur.croiseur;
+import Joueur.sousmarin;
+
 public class GraphePlateau
 {
   private final int size;
@@ -36,7 +40,7 @@ public class GraphePlateau
   {
     if (sunkenShips == shipCount)
     {
-      System.out.printf("===> Super! un bateau a été destrui!\n", shipCount, shotCount);
+      System.out.printf("===> Super! un bateau a été destruis!\n", shipCount, shotCount);
 
       return true;
     }
@@ -54,15 +58,15 @@ public class GraphePlateau
 
     if (x >= size || y >= size)
     {
-      System.out.println("===> Coordinates out of range!");
+      System.out.println("===> Coordonnées à l'exterieur du plateau!");
       return false;
     }
     
 
-    if (field instanceof Ship)
+    if (field instanceof classBateau)
     {
 
-      Ship ship = (Ship) field;
+    	classBateau ship = (classBateau) field;
       
 
       if (ship.sunken())
@@ -104,8 +108,7 @@ public class GraphePlateau
       createShip();
     }
   }
-
- 
+  
   private void createShip()
   {
     Random random = new Random();
@@ -128,7 +131,7 @@ public class GraphePlateau
   {
     if (!isOccupied(x, y) && checkFieldLength(x, y, length, horizontal) && checkFieldArea(x, y, length, horizontal))
     {
-      Ship ship;
+    	classBateau ship;
       
     
       switch (length)
@@ -144,12 +147,12 @@ public class GraphePlateau
             ship = new Destroyer(x, y, length, horizontal);
           } else {
            
-            ship = new Submarine(x, y, length, horizontal);
+            ship = new sousmarin(x, y, length, horizontal);
           }
           break;
         case 4:
          
-          ship = new Cruiser(x, y, length, horizontal);
+          ship = new croiseur(x, y, length, horizontal);
           break;
         case 5:
           
@@ -295,7 +298,7 @@ public class GraphePlateau
       {
         if (!(getPlateau(col, row) instanceof Plateau1))
         {
-          output += (getPlateau(col, row) instanceof Ship) ? "X" : "S";
+          output += (getPlateau(col, row) instanceof classBateau) ? "X" : "S";
         } else {
           output += "#";
         }

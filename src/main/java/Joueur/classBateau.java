@@ -33,5 +33,8 @@ abstract public class classBateau extends Plateau {
 	public void shot() {
 		taille--;
 	}
+	
+	abstract public String getType();
+	
 
 }

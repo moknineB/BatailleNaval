@@ -1,6 +1,6 @@
 package Joueur;
 
-abstract public class porteavion extends classBateau {
+ public class porteavion extends classBateau {
 
 	  public porteavion(int x, int y, int length, boolean horizontal)
 	  {

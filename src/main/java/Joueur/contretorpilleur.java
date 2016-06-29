@@ -1,6 +1,6 @@
 package Joueur;
 
-abstract public class contretorpilleur extends classBateau {
+public class contretorpilleur extends classBateau {
 
 	  public contretorpilleur(int x, int y, int length, boolean horizontal)
 	  {

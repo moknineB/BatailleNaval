@@ -1,6 +1,6 @@
 package Joueur;
 
-abstract public class torpilleur extends classBateau {
+public class torpilleur extends classBateau {
 
 	  public torpilleur(int x, int y, int length, boolean horizontal)
 	  {

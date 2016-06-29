@@ -20,6 +20,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
+import Joueur.classBateau;
+
 public class Graphique extends JFrame implements Graphe
 {
 
@@ -71,7 +73,7 @@ public class Graphique extends JFrame implements Graphe
     field.setBackground(new Color(85, 185, 218));
   }
 
-  public void displayShip(Ship ship)
+  public void displayShip(classBateau ship)
   {
     displayShip(ship.getType(), ship.getX(), ship.getY(), ship.isHorizontal(), ship.getLength());
   }

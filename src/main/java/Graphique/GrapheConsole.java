@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+import Joueur.classBateau;
+
 
 public class GrapheConsole implements Graphe
 {
@@ -45,7 +47,7 @@ public class GrapheConsole implements Graphe
     setField(x, y, icons[1]);
   }
 
-  public void displayShip(Ship ship)
+  public void displayShip(classBateau ship)
   {
     for (int i = 0; i < ship.getLength(); i++)
     {
@@ -56,7 +58,7 @@ public class GrapheConsole implements Graphe
         setField(ship.getX(), ship.getY() + i, icons[4]);
       }
     }
-    System.out.println("===> Bateau est touché!\n");
+    System.out.println("===> Le Bateau est touché!\n");
   }
 
   private void setField(int x, int y, String icon)
@@ -98,7 +100,7 @@ public class GrapheConsole implements Graphe
   {
     StringBuilder sb = new StringBuilder();
     
-    sb.append("|                   Java Bataille Navale    B3 EPSI             /\n");
+    sb.append("|     Java Bataille Navale    B3 EPSI             /\n");
     sb.append("===> Entrer vos coordonnées: x,y\n");
     
     System.out.println(sb.toString());
