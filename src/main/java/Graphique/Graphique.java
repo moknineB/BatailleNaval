@@ -157,12 +157,9 @@ public class Graphique extends JFrame implements Graphe
             JButton button = (JButton) event.getSource();
             Rectangle rectangle = button.getBounds();
             Point point = button.getLocation();
-            
-            
             int row = point.y / rectangle.height;
             int col = point.x / rectangle.width;
             
-          
             shoot(col, row);
           }
         });

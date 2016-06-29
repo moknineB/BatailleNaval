@@ -36,5 +36,4 @@ abstract public class classBateau extends Plateau {
 	
 	abstract public String getType();
 	
-
 }

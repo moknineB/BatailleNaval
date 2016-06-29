@@ -142,6 +142,7 @@ public class GraphePlateau
          
           ship = new Boat(x, y, length, horizontal);
           break;
+          
         case 3:
           if (x < 4) 
           {
@@ -152,17 +153,19 @@ public class GraphePlateau
             ship = new sousmarin(x, y, length, horizontal);
           }
           break;
+          
         case 4:
          
           ship = new croiseur(x, y, length, horizontal);
           break;
+          
         case 5:
           
           ship = new porteavion(x, y, length, horizontal);
           break;
         default:
           
-          ship = new Boat(x, y, length, horizontal);
+          ship = new classBateau(x, y, length, horizontal);
           break;
       }
       

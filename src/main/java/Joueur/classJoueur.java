@@ -67,9 +67,5 @@ public class classJoueur
 
 	public void setTorpilleur(classBateau torpilleur) {
 		this.torpilleur = torpilleur;
-	}
-	
-	
-	
-	
+	}	
 }
