@@ -1,7 +1,9 @@
+package Graphique;
 
 import java.util.Arrays;
 import java.util.Random;
 
+import Joueur.Navire;
 import Joueur.classBateau;
 import Joueur.croiseur;
 import Joueur.porteavion;
@@ -140,7 +142,7 @@ public class GraphePlateau
       {
         case 2:
          
-          ship = new Boat(x, y, length, horizontal);
+          ship = new Navire(x, y, length, horizontal);
           break;
           
         case 3:
@@ -165,7 +167,7 @@ public class GraphePlateau
           break;
         default:
           
-          ship = new classBateau(x, y, length, horizontal);
+          ship = new Navire(x, y, length, horizontal);
           break;
       }
       

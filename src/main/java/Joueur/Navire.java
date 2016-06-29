@@ -1,14 +1,15 @@
+package Joueur;
 
-package Graphique;
+public class Navire extends classBateau {
 
-import Joueur.classBateau;
 
-public interface Graphe {
+  public Navire(int x, int y, int length, boolean horizontal)
+  {
+    super(x, y, length, horizontal);
+  }
 
-	public void displayStrike(int x, int y);
-
-	public void displayMissed(int x, int y);
-
-	public void displayShip(classBateau navire);
-	
+  public String getType()
+  {
+    return "navire";
+  }
 }
