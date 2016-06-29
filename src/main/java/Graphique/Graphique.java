@@ -205,16 +205,10 @@ public class Graphique extends JFrame implements Graphe
     }
   }
 
-  public void addHighscore()
+ /* public void addHighscore()
   {
-    String s = (String) JOptionPane.showInputDialog(frame,
-                    "Complete the sentence:\n"
-                    + "\"Green eggs and...\"",
-                    "Customized Dialog",
-                    JOptionPane.PLAIN_MESSAGE,
-                    icon,
-                    possibilities,
-                    "ham");
+    String s = (String) JOptionPane.showInputDialog(frame,"Complete the sentence:\n"+ "\"Green eggs and...\"","Customized Dialog",
+                    JOptionPane.PLAIN_MESSAGE, icon,possibilities,"ham");
 
     //If a string was returned, say so.
     if ((s != null) && (s.length() > 0)) {
@@ -224,6 +218,6 @@ public class Graphique extends JFrame implements Graphe
     
     //If you're here, the return value was null/empty.
     setLabel("Finissez votre chemin!");
-  }
+  }*/
 
 }
