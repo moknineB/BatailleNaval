@@ -33,7 +33,7 @@ public class Graphique extends JFrame implements Graphe
 
   private final GraphePlateau grapheplateau;
 
-  private final String IMAGE_PATH = "../resources/images/";
+  private final String CHEMIN_IMAGE = "../resources/images/";
 
   public Graphique(GraphePlateau grapheplateau)
   { 
@@ -193,7 +193,7 @@ public class Graphique extends JFrame implements Graphe
   private void setFieldIcon(JButton field, String imgPath)
   {
     try {
-      Image img = ImageIO.read(getClass().getResource(IMAGE_PATH + imgPath));
+      Image img = ImageIO.read(getClass().getResource(CHEMIN_IMAGE + imgPath));
       field.setIcon(new ImageIcon(img));
     } catch (IOException e) {
       System.out.println("On ne peut pas voir l'icone: " + e);
