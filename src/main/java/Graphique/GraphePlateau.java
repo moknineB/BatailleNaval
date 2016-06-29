@@ -4,7 +4,9 @@ import java.util.Random;
 
 import Joueur.classBateau;
 import Joueur.croiseur;
+import Joueur.porteavion;
 import Joueur.sousmarin;
+import Joueur.torpilleur;
 
 public class GraphePlateau
 {
@@ -144,7 +146,7 @@ public class GraphePlateau
           if (x < 4) 
           {
            
-            ship = new Destroyer(x, y, length, horizontal);
+            ship = new torpilleur(x, y, length, horizontal);
           } else {
            
             ship = new sousmarin(x, y, length, horizontal);
@@ -156,7 +158,7 @@ public class GraphePlateau
           break;
         case 5:
           
-          ship = new AirCarrier(x, y, length, horizontal);
+          ship = new porteavion(x, y, length, horizontal);
           break;
         default:
           
