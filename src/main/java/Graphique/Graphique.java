@@ -33,7 +33,7 @@ public class Graphique extends JFrame implements Graphe
 
   private final GraphePlateau grapheplateau;
 
-  private final String IMAGE_PATH = "../battleship/resources/images/";
+  private final String IMAGE_PATH = "../resources/images/";
 
   public Graphique(GraphePlateau grapheplateau)
   { 
