@@ -16,7 +16,4 @@ public class classPartie
 	  {
 	    GraphePlateau plateau = new GraphePlateau(size);
 	  }
-
-
-	
 }

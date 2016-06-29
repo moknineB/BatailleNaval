@@ -58,7 +58,7 @@ public class GrapheConsole implements Graphe
         setField(ship.getX(), ship.getY() + i, icons[4]);
       }
     }
-    System.out.println("===> Le Bateau est touché!\n");
+    System.out.println("===> Le navire est touché!\n");
   }
 
   private void setField(int x, int y, String icon)
@@ -100,7 +100,7 @@ public class GrapheConsole implements Graphe
   {
     StringBuilder sb = new StringBuilder();
     
-    sb.append("|     Java Bataille Navale    B3 EPSI             /\n");
+    sb.append("| Java Bataille Navale    B3 EPSI   /\n");
     sb.append("===> Entrer vos coordonnées: x,y\n");
     
     System.out.println(sb.toString());
@@ -118,7 +118,7 @@ public class GrapheConsole implements Graphe
         
         if (input.length() < 3)
         {
-          System.out.println("quels sont vos coordonnées: y,x");
+          System.out.println("Entrez vos coordonnées: y,x");
           continue;
         }
         

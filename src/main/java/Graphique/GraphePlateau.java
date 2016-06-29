@@ -26,19 +26,18 @@ public class GraphePlateau
 
   public GraphePlateau(int size)
   {
-        System.out.println("########### hello world");
-    this.size = size;
+        System.out.println("Bonjour");
+        this.size = size;
     
-    gameField = new Plateau[size][size];
-    
-    for (Plateau[] row : gameField)
-    {
-      Arrays.fill(row, new Plateau1());
-    }
+        gameField = new Plateau[size][size];
+        for (Plateau[] row : gameField)
+        {
+        	Arrays.fill(row, new Plateau1());
+        }
 
-    generateShips();
-    debuging();
-  }
+        generateShips();
+        debuging();
+  	}
 
   public boolean solved()
   {

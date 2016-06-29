@@ -94,7 +94,6 @@ public class Graphique extends JFrame implements Graphe
       }
     });
     
-   
     GridBagConstraints c = new GridBagConstraints();
     c.fill = GridBagConstraints.BOTH;
   
@@ -119,21 +118,18 @@ public class Graphique extends JFrame implements Graphe
   
     removeFields(x, y, horizontal, length);
     setFieldIcon(button, "ship_" + type + (horizontal ? "h" : "v") + ".png");
-    
-    
     gamePanel.add(button, c);
     gamePanel.revalidate();
     gamePanel.repaint();
+    
   }
 
   private boolean shoot(int x, int y)
   {
-    
     System.out.printf("At cell %d,%d\n", x, y);
     return grapheplateau.shoot(x, y);
   }
-
- 
+  
   private void buildFields()
   {
     GridBagConstraints c = new GridBagConstraints();
@@ -162,8 +158,7 @@ public class Graphique extends JFrame implements Graphe
             shoot(col, row);
           }
         });
-        
-       
+
         setField(col, row, button);
         c.gridx = col;
         c.gridy = row;
@@ -204,20 +199,5 @@ public class Graphique extends JFrame implements Graphe
       System.out.println("On ne peut pas voir l'icone: " + e);
     }
   }
-
- /* public void addHighscore()
-  {
-    String s = (String) JOptionPane.showInputDialog(frame,"Complete the sentence:\n"+ "\"Green eggs and...\"","Customized Dialog",
-                    JOptionPane.PLAIN_MESSAGE, icon,possibilities,"ham");
-
-    //If a string was returned, say so.
-    if ((s != null) && (s.length() > 0)) {
-      setLabel("Green eggs and... " + s + "!");
-      return;
-    }
-    
-    //If you're here, the return value was null/empty.
-    setLabel("Finissez votre chemin!");
-  }*/
 
 }

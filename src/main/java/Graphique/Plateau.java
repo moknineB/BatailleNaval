@@ -1,6 +1,5 @@
 package Graphique;
 
-
 public abstract class Plateau
 {
   private int length = 1;
