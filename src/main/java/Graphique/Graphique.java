@@ -62,7 +62,6 @@ public class Graphique extends JFrame implements Graphe
 
   public void displayStrike(int x, int y)
   {
-   
     JButton field = getField(x, y);
     setFieldIcon(field, "strike.png");
   }
@@ -202,7 +201,7 @@ public class Graphique extends JFrame implements Graphe
       Image img = ImageIO.read(getClass().getResource(IMAGE_PATH + imgPath));
       field.setIcon(new ImageIcon(img));
     } catch (IOException e) {
-      System.out.println("Couldn't set field icon: " + e);
+      System.out.println("On ne peut pas voir l'icone: " + e);
     }
   }
 
@@ -224,7 +223,7 @@ public class Graphique extends JFrame implements Graphe
     }
     
     //If you're here, the return value was null/empty.
-    setLabel("Come on, finish the sentence!");
+    setLabel("Finissez votre chemin!");
   }
 
 }
