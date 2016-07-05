@@ -1,9 +1,7 @@
 
-/*
 package Graphique;
-=======
-/*package Graphique;
->>>>>>> origin/master
+
+import Joueur.classBateau;
 
 public interface Graphe {
 
@@ -11,6 +9,6 @@ public interface Graphe {
 
 	public void displayMissed(int x, int y);
 
-	public void displayShip(Ship ship);
-
-}*/
+	public void displayShip(classBateau navire);
+	
+}
